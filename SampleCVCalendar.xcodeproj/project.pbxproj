@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3412599B5117FD35B875B78B /* Pods_SampleCVCalendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC1E0851A1AAB0F9BFC126AA /* Pods_SampleCVCalendar.framework */; };
+		9AA3A1801DB20C3F00F013D4 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3A17F1DB20C3F00F013D4 /* EventViewController.swift */; };
 		9ADFE4711DA7E00500774F14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFE4701DA7E00500774F14 /* AppDelegate.swift */; };
 		9ADFE4731DA7E00500774F14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADFE4721DA7E00500774F14 /* ViewController.swift */; };
 		9ADFE4761DA7E00500774F14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADFE4741DA7E00500774F14 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A8C2FCC14667407F4F72E84 /* Pods-SampleCVCalendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCVCalendar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SampleCVCalendar/Pods-SampleCVCalendar.debug.xcconfig"; sourceTree = "<group>"; };
+		9AA3A17F1DB20C3F00F013D4 /* EventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		9ADFE46D1DA7E00500774F14 /* SampleCVCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleCVCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ADFE4701DA7E00500774F14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9ADFE4721DA7E00500774F14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		9ADFE4771DA7E00500774F14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9ADFE47A1DA7E00500774F14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9ADFE47C1DA7E00500774F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1E0851A1AAB0F9BFC126AA /* Pods_SampleCVCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SampleCVCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E649533F7679DCF36D9A9DA3 /* Pods-SampleCVCalendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SampleCVCalendar.release.xcconfig"; path = "Pods/Target Support Files/Pods-SampleCVCalendar/Pods-SampleCVCalendar.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3412599B5117FD35B875B78B /* Pods_SampleCVCalendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		689787AF5D3E816012B35E6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC1E0851A1AAB0F9BFC126AA /* Pods_SampleCVCalendar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9ADFE4641DA7E00500774F14 = {
 			isa = PBXGroup;
 			children = (
 				9ADFE46F1DA7E00500774F14 /* SampleCVCalendar */,
 				9ADFE46E1DA7E00500774F14 /* Products */,
+				C0970C2D1706114FD3810A78 /* Pods */,
+				689787AF5D3E816012B35E6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +73,22 @@
 			children = (
 				9ADFE4701DA7E00500774F14 /* AppDelegate.swift */,
 				9ADFE4721DA7E00500774F14 /* ViewController.swift */,
+				9AA3A17F1DB20C3F00F013D4 /* EventViewController.swift */,
 				9ADFE4741DA7E00500774F14 /* Main.storyboard */,
 				9ADFE4771DA7E00500774F14 /* Assets.xcassets */,
 				9ADFE4791DA7E00500774F14 /* LaunchScreen.storyboard */,
 				9ADFE47C1DA7E00500774F14 /* Info.plist */,
 			);
 			path = SampleCVCalendar;
+			sourceTree = "<group>";
+		};
+		C0970C2D1706114FD3810A78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A8C2FCC14667407F4F72E84 /* Pods-SampleCVCalendar.debug.xcconfig */,
+				E649533F7679DCF36D9A9DA3 /* Pods-SampleCVCalendar.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ADFE47F1DA7E00500774F14 /* Build configuration list for PBXNativeTarget "SampleCVCalendar" */;
 			buildPhases = (
+				D3E39CCDDC0B222FD25996B2 /* [CP] Check Pods Manifest.lock */,
 				9ADFE4691DA7E00500774F14 /* Sources */,
 				9ADFE46A1DA7E00500774F14 /* Frameworks */,
 				9ADFE46B1DA7E00500774F14 /* Resources */,
+				F6D2F04DE7E04F94747A45B3 /* [CP] Embed Pods Frameworks */,
+				FB33A6E21D296CDEB363EDA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +162,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D3E39CCDDC0B222FD25996B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6D2F04DE7E04F94747A45B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleCVCalendar/Pods-SampleCVCalendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB33A6E21D296CDEB363EDA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleCVCalendar/Pods-SampleCVCalendar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9ADFE4691DA7E00500774F14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +217,7 @@
 			files = (
 				9ADFE4731DA7E00500774F14 /* ViewController.swift in Sources */,
 				9ADFE4711DA7E00500774F14 /* AppDelegate.swift in Sources */,
+				9AA3A1801DB20C3F00F013D4 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +261,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -231,6 +311,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -257,7 +338,9 @@
 		};
 		9ADFE4801DA7E00500774F14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A8C2FCC14667407F4F72E84 /* Pods-SampleCVCalendar.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68682W8R4T;
 				INFOPLIST_FILE = SampleCVCalendar/Info.plist;
@@ -270,7 +353,9 @@
 		};
 		9ADFE4811DA7E00500774F14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E649533F7679DCF36D9A9DA3 /* Pods-SampleCVCalendar.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 68682W8R4T;
 				INFOPLIST_FILE = SampleCVCalendar/Info.plist;
@@ -300,6 +385,7 @@
 				9ADFE4811DA7E00500774F14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
