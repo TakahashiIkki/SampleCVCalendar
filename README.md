@@ -6,6 +6,12 @@ CVCalendarライブラリを使って、カレンダーを表示しています�
 
 現在、EventKitを使って、カレンダーからの情報取得を実装している所です。
 
+## Image(ScreenShot)
+
+<p align="center">
+  <img src ="https://raw.githubusercontent.com/TakahashiIkki/SampleCVCalendar/master/ScreenShot/sh_1.png" />
+</p>
+
 ## Language
 
 Swift 3.0
