@@ -6,4 +6,5 @@ target 'SampleCVCalendar' do
   use_frameworks!
 
   pod 'CVCalendar', '~> 1.4.0'
+  pod 'SCLAlertView'
 end
