@@ -39,7 +39,7 @@
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1z-FD-17a">
                                 <connections>
-                                    <segue destination="akc-fQ-OcA" kind="embed" id="ihw-An-wON"/>
+                                    <segue destination="akc-fQ-OcA" kind="embed" identifier="EventTableEmbedSegue" id="ihw-An-wON"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日の予定" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z63-UU-Vo2">
@@ -102,7 +102,7 @@
                         <viewControllerLayoutGuide type="bottom" id="BKO-hQ-60c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xR5-qv-M0Q">
-                        <rect key="frame" x="0.0" y="0.0" width="374" height="297"/>
+                        <rect key="frame" x="0.0" y="0.0" width="374" height="297.66666666666674"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RhG-4n-rY4">
