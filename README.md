@@ -8,8 +8,8 @@ CVCalendarライブラリを使って、カレンダーを表示しています�
 
 ## Image(ScreenShot)
 
-<p align="center" style="height: 320px; width: 568px;" >
-  <img src ="https://raw.githubusercontent.com/TakahashiIkki/SampleCVCalendar/master/ScreenShot/sh_1.png" />
+<p align="center" >
+  <img src ="https://raw.githubusercontent.com/TakahashiIkki/SampleCVCalendar/master/ScreenShot/sh_1.png" style="height: 320px; width: 568px;" />
 </p>
 
 ## Language
