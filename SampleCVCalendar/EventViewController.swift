@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import EventKit
 import CVCalendar
+import SCLAlertView
 
 class EventViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -44,7 +46,7 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     open func settingAndReloadContent(count: Int) {
-        guard count > 0 else {
+        guard count >= 0 else {
             return
         }
         
@@ -54,7 +56,71 @@ class EventViewController: UIViewController, UITableViewDelegate, UITableViewDat
             myItems.append("テスト No.\(i)")
         }
         
-        self.eventTableView.reloadData()
+        if eventTableView != nil {
+            self.eventTableView.reloadData()
+        }
     }
     
+    open func reloadEventList(targetDate: Date) {
+        
+        self.settingAndReloadContent(count: CVDate(date: targetDate).day - 1)
+        
+        print("reloadEventList")
+    }
+    
+    fileprivate func getEventList(targetDate: Date) -> [EKEvent] {
+        
+        // ステータスを取得.
+        let status = EKEventStore.authorizationStatus(for: .event)
+        
+        // ステータスを表示 許可されている場合のみtrueを返す.
+        switch status {
+        case .notDetermined:
+            print("NotDetermined")
+            
+            
+        case .denied:
+            print("Denied")
+            let appearance = SCLAlertView.SCLAppearance(
+                showCloseButton: false
+            )
+            let alertView = SCLAlertView(appearance: appearance)
+            alertView.addButton("設定しない", action: {})
+            alertView.addButton("設定する") {
+                if let url = NSURL(string: UIApplicationOpenSettingsURLString) {
+                    UIApplication.shared.open(url as URL)
+                }
+            }
+            alertView.showWarning("エラー", subTitle: "カレンダーへのアクセスが許可されていないので、読み込めませんでした。")
+            
+        case .authorized:
+            print("Authorized")
+            //            myEventStore.requestAccess(to: .event) { (granted , error) -> Void in
+            //
+            //                // 許可を得られなかった場合アラート発動.
+            //                if granted {
+            //                    return
+            //                } else {
+            //
+            //                    // メインスレッド 画面制御. 非同期.
+            //                    DispatchQueue.main.async(){ () -> Void in
+            //
+            //                        // アラート生成.
+            //                        let myAlert = UIAlertController(title: "権限許可なし", message: "カレンダー情報の取得は許可されていません", preferredStyle: .alert)
+            //
+            //                        // アラートアクション.
+            //                        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            //
+            //                        myAlert.addAction(okAction)
+            //                        self.present(myAlert, animated: true, completion: nil)
+            //                    }
+            //                }
+            //            }
+        case .restricted:
+            print("Restricted")
+            
+        }
+        
+        return []
+    }
 }

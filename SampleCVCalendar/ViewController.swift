@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EventKit
 import CVCalendar
 
 class ViewController: UIViewController {
@@ -14,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var menuView: CVCalendarMenuView!
     @IBOutlet weak var calendarView: CVCalendarView!
     @IBOutlet weak var eventTableContainerView: UIView!
+    
+    var eventViewController: EventViewController!
     
     struct Color {
         static let selectedText = UIColor.white
@@ -47,11 +50,26 @@ class ViewController: UIViewController {
         
         // これをしないと、Todayの上にだけマーカーが表示されてしまいます。
         calendarView.contentController.refreshPresentedMonth()
+        
+        self.letReloadEventLists()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EventTableEmbedSegue" {
+            eventViewController = (segue.destination as? EventViewController)!
+            self.letReloadEventLists()
+        }
+    }
+    
+    //
+    fileprivate func letReloadEventLists() {
+        let currentDate = self.calendarView.presentedDate.convertedDate()
+        eventViewController.reloadEventList(targetDate: currentDate!)
     }
     
     fileprivate func getDescriptionOfJa(date: CVDate) -> String {
@@ -89,16 +107,14 @@ extension ViewController: CVCalendarViewDelegate, CVCalendarMenuViewDelegate
         if self.navigationItem.title != self.getDescriptionOfJa(date: date) {
             self.navigationItem.title = self.getDescriptionOfJa(date: date)
         }
-        
-        if (self.childViewControllers.count > 0) {
-            let vc = self.childViewControllers[0] as! EventViewController
-            vc.settingAndReloadContent(count: date.day - 1)
-        }
-        
     }
     
     func dayOfWeekTextUppercase() -> Bool {
         return false
+    }
+
+    func didSelectDayView(_ dayView: DayView, animationDidFinish: Bool) {
+        self.letReloadEventLists()
     }
     
     // My Definiton
